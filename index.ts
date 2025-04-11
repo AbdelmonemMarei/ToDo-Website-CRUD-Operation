@@ -250,7 +250,7 @@ class TodoApp {
   }
   updateTodo(): void | undefined {
     const text:string = this.inputField.value.trim();
-    if(!/^[a-zA-Z][a-zA-Z0-9]+$/.test(text)){
+    if(!/^[a-zA-Z][a-zA-Z0-9\s]+$/g.test(text)){
       this.errorParagrah.classList.add('active');
       return;
     }else{
@@ -271,7 +271,7 @@ class TodoApp {
   addTodo(): void | undefined {
     // add new todo
     const text:string = this.inputField.value.trim();
-    if(!/^[a-zA-Z][a-zA-Z0-9]+$/.test(text)){
+    if(!/^[a-zA-Z][a-zA-Z0-9\s]+$/g.test(text)){
       this.errorParagrah.classList.add('active');
       return;
     }else{
