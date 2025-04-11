@@ -238,7 +238,7 @@ var TodoApp = /** @class */ (function () {
     TodoApp.prototype.updateTodo = function () {
         var _this = this;
         var text = this.inputField.value.trim();
-        if (!/^[a-zA-Z][a-zA-Z0-9\s]+$/g.test(text))) {
+        if (!/^[a-zA-Z][a-zA-Z0-9\s]+$/g.test(text)) {
             this.errorParagrah.classList.add('active');
             return;
         }
